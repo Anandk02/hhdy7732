@@ -22,7 +22,7 @@ a {
     text-decoration: none; }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #6C757D }
+  color: #f1b421 }
 
 .position-relative {
   position: relative !important; }
@@ -545,11 +545,14 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 4rem; } }
   .site-blocks-cover .sub-text {
     font-size: 1.4rem;
-    color: #fff;
-    font-weight: 300; }
+    color: #f3eeef;
+    font-weight: 400;
+    text-align: justify;
+  }
+    
     @media (max-width: 991.98px) {
       .site-blocks-cover .sub-text {
-        color: #000; } }
+        color: #ffffff; } }
   .site-blocks-cover .img-wrap {
     position: absolute;
     z-index: -1;
@@ -659,8 +662,9 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(
     font-size: 1rem;
     color: #000; }
   .service p {
-    color: #999999;
-    font-size: .85rem; }
+    color: #0044cc;
+    font-size: .95rem;
+  font-weight: 300; }
 
 .readmore {
   position: relative;
