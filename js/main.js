@@ -388,7 +388,6 @@ jQuery(document).ready(function ($) {
 });
 
 // Form submission query check
-
 $(document).ready(function () {
   $("#submitForm").click(function (event) {
     event.preventDefault();
@@ -397,10 +396,47 @@ $(document).ready(function () {
     var number = $("#number").val();
     var message = $("#message").val();
 
+    // Reset previous error messages
+    $(".error").remove();
+
+    // Regular expressions for email and mobile number validation
+    var emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+    var numberRegex = /^[6-9]\d{9}$/;
+
     // Perform client-side validation
-    if (fname === "" || email === "" || number === "" || message === "") {
-      $("#response").html("Please fill in all the fields");
-    } else {
+    var isValid = true;
+    if (fname === "") {
+      $("#fname").after(
+        "<span class='error'>Please enter your first name</span>"
+      );
+      isValid = false;
+    }
+    if (email === "") {
+      $("#email").after("<span class='error'>Please enter your email</span>");
+      isValid = false;
+    } else if (!emailRegex.test(email)) {
+      $("#email").after(
+        "<span class='error'>Please enter a valid email address</span>"
+      );
+      isValid = false;
+    }
+    if (number === "") {
+      $("#number").after(
+        "<span class='error'>Please enter your mobile number</span>"
+      );
+      isValid = false;
+    } else if (!numberRegex.test(number)) {
+      $("#number").after(
+        "<span class='error'>Please enter a valid 10-digit mobile number starting with 6, 7, 8, or 9</span>"
+      );
+      isValid = false;
+    }
+    if (message === "") {
+      $("#message").after("<span class='error'>Please enter a message</span>");
+      isValid = false;
+    }
+
+    if (isValid) {
       // AJAX form submission
       $.ajax({
         type: "POST",
