@@ -299,6 +299,12 @@ h6 {
   line-height: 0;
   position: relative;
 }
+/* .site-logo img {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: 40px;
+  height: 40px;
+} */
 .site-navbar .site-logo a {
   font-weight: 200;
   color: #fff;
