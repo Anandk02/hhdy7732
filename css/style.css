@@ -44,9 +44,6 @@ h6 {
   overflow: hidden;
 }
 
-.text-primary {
-  color: #830C18;
-}
 
 .text-black {
   color: #080808 !important;
@@ -916,8 +913,8 @@ h6 {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-  font-weight: 400;
-  color: #b3b3b3;
+  font-weight: 600;
+  color: #563A24;
 }
 
 .section-title .title {
@@ -955,7 +952,8 @@ h6 {
 }
 
 .service h3 {
-  font-size: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
   color: #000;
 }
 
@@ -1013,6 +1011,9 @@ h6 {
   padding-left: 35px;
   margin-bottom: 15px;
   line-height: 1.5;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #424242;
 }
 
 .ul-check li:before {
@@ -1216,4 +1217,49 @@ h6 {
   /* Firefox 18- */
   color: #ccc;
   font-style: italic;
+}
+
+
+/* Contact us button */
+.playstore-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fefefe;
+  border-radius: 9999px;
+  background-color: rgba(0, 0, 0, 1);
+  padding: 0.625rem 1.5rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  outline: 0;
+  transition: all .2s ease;
+  text-decoration: none;
+}
+
+.playstore-button:hover {
+  background-color: white;
+  color: rgb(13, 181, 69);
+}
+
+.icon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.texts {
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1;
+}
+
+.text-1 {
+  margin-bottom: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.text-2 {
+  font-weight: 600;
 }
