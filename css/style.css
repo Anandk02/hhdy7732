@@ -1263,3 +1263,214 @@ h6 {
 .text-2 {
   font-weight: 600;
 }
+
+
+/* Technology */
+.content {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.content .container {
+  box-shadow: 2px 15px 20px #1f1f1f10, -2px -8px 20px #1f1f1f1a;
+}
+
+
+.container .rollers {
+  flex: 0 0 230px;
+}
+
+.container .start-roller {
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(to right, white 30%, #ffffff00);
+}
+
+.container .start-roller,
+.container .end-roller {
+  height: 100%;
+  width: 40px;
+  position: absolute;
+  z-index: 1;
+}
+
+.container .end-roller {
+  right: 0;
+  top: 0;
+  background-image: linear-gradient(to left, white 30%, rgba(255, 255, 255, 0));
+}
+
+.container .rollers .wrapper {
+  position: relative;
+  width: 1400px;
+  height: 100px;
+  margin: 0 0 20px 0;
+  flex: 0 0 auto;
+}
+
+.container .rollers .wrapper .items-container {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-animation-duration: 30s;
+  animation-duration: 30s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+
+.container .rollers .wrapper .items-container.roll-LL {
+  -webkit-animation-name: roll;
+  animation-name: roll;
+}
+
+.container .rollers .wrapper .items-container.roll-RL {
+  -webkit-animation-name: roll-reverse;
+  animation-name: roll-reverse;
+  left: 100%;
+}
+
+.container .rollers .wrapper .items-container.reverse-roll-LL {
+  -webkit-animation-name: roll-clockwise;
+  animation-name: roll-clockwise;
+  left: -100%;
+}
+
+.container .rollers .wrapper .items-container.reverse-roll-RL {
+  -webkit-animation-name: roll-reverse-clockwise;
+  animation-name: roll-reverse-clockwise;
+  left: 100%;
+}
+
+@-webkit-keyframes roll {
+  0% {
+    left: 0%;
+  }
+
+  100% {
+    left: -100%;
+  }
+}
+
+@keyframes roll {
+  0% {
+    left: 0%;
+  }
+
+  100% {
+    left: -100%;
+  }
+}
+
+@-webkit-keyframes roll-reverse {
+  0% {
+    left: 100%;
+  }
+
+  100% {
+    left: 0%;
+  }
+}
+
+@keyframes roll-reverse {
+  0% {
+    left: 100%;
+  }
+
+  100% {
+    left: 0%;
+  }
+}
+
+@-webkit-keyframes roll-clockwise {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 0%;
+  }
+}
+
+@keyframes roll-clockwise {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 0%;
+  }
+}
+
+@-webkit-keyframes roll-reverse-clockwise {
+  0% {
+    left: 0%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes roll-reverse-clockwise {
+  0% {
+    left: 0%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+
+.container .rollers .wrapper .items-container .item {
+  flex: 1 1 200px;
+  min-width: 0;
+  margin: 20px;
+}
+
+.container .rollers .wrapper .items-container .item .company {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  opacity: 0.2;
+  width: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.container .rollers .wrapper .items-container .item .company:hover {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+  opacity: 1;
+  cursor: pointer;
+}
+
+.container img {
+  vertical-align: middle;
+}
+
+@media (max-width: 575.5px) {
+  .content {
+    padding: 20px;
+  }
+
+  .content .container {
+    padding: 20px;
+  }
+
+  .h3 {
+    font-size: calc(1.1rem + .6vw);
+  }
+
+  .fs-5 {
+    font-size: 0.9rem !important;
+  }
+
+  .container .rollers .wrapper .items-container .item .company {
+    opacity: 0.4;
+  }
+}
